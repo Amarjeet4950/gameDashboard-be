@@ -1,6 +1,20 @@
 version: '3.8'
 
 services:
+  fastapi:
+      build:
+        context: .
+        dockerfile: apiDockerfile  
+      container_name: my-apis
+      environment:
+        POSTGRES_USER: myuser
+        POSTGRES_PASSWORD: mypassword
+        POSTGRES_DB: mydatabase
+      ports:
+        - "8000:8000"
+      depends_on:
+        - postgres
+      restart: unless-stopped
   postgres:
     build:
       context: .

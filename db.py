@@ -3,7 +3,7 @@ from psycopg2 import sql
 import threading
 
 # Database connection parameters
-HOST = "localhost"  # or IP address of the PostgreSQL server
+HOST = "postgres"  # or IP address of the PostgreSQL server
 PORT = "5432"  # Default PostgreSQL port
 USER = "myuser"  # Your PostgreSQL username
 PASSWORD = "mypassword"  # Your PostgreSQL password
